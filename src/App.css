@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol {
+  margin: 0;
+  padding: 0;
+}
+
+body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+}
+
+main {
+  padding: 6rem 5rem;
+}
+
+.normal {
+  font-style: normal;
+}
+
+.bold {
+  font-style: bold;
+}
+
+button {
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  color: white;
+  background-color: #34a5da;
+  border-radius: 1rem;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: inset -1.5px -3px 0 0px #184c64;
+  transition: border linear .05s, box-shadow linear .05s;
+}
+
+button:hover {
+  opacity: 90%;
+}
+
+button:active {
+box-sizing: border-box;
+border-style: inset;
+ box-shadow: inset -.5px -1px 0 0px #113748;
+ border-top: 1px solid #222222;
+ border-left: 1px solid #222222;
+ border-right: none;
+ border-bottom: none;
+}
+
+.leftBtn {
+  margin-left: auto;
+}
+
+.middleBtn {
+  margin: 0 1rem;
+}
+
+.rightBtn {
+  margin-right: auto;
+}
+
+.toolBar {
+  display: flex;
+  color: #ebebeb;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.toolBar > h3 {
+  cursor: pointer;
+}
+
+.toolBar > h3:hover {
+  opacity: 85%;
+}
+
+.toolBar > h3:active {
+  transform: scale(.9);
+}
