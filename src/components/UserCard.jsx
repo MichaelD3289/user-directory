@@ -1,8 +1,9 @@
 import React from "react"
+import New from './New'
 
-export default function UserCard({userCards, index}) {
+export default function UserCard({userCards, index, newUserClicked, submitNewUser}) {
 
-  const {city,  country, employer, favoriteMovies, id, name: {first, last}, title} = userCards[index]
+  const {city,  country, employer, favoriteMovies, name: {first, last}, title} = userCards[index]
 
   const bold = {
     letterSpacing: '.1rem',
@@ -15,6 +16,8 @@ export default function UserCard({userCards, index}) {
     letterSpacing: ".15rem",
     marginBottom: ".5rem"
   }
+
+
   
   return (
     <article style={{
@@ -25,6 +28,8 @@ export default function UserCard({userCards, index}) {
       padding: "4rem 5rem",
       position: "relative"
     }}>
+      {newUserClicked && <New submitNewUser={submitNewUser} />}
+     {!newUserClicked && <>
       <h1 style={{
         fontSize: "2rem",
         borderBottom: "2.5px solid #34a5da",
@@ -65,6 +70,8 @@ export default function UserCard({userCards, index}) {
       }}>
         {index + 1}/{userCards.length}
         </h4>
+        </>}
+
     </article>
   )
 }
